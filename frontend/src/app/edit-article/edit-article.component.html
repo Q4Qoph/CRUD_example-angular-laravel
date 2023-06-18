@@ -1,0 +1,18 @@
+    <div class="mb-3">
+      <label for="articletitle" class="form-label">Article Title</label>
+      <input type="text" class="form-control"  [(ngModel)]="article.title" #articleTitle>
+    </div>
+
+    <div class="mb-3">
+      <label for="articlebody" class="form-label">Article Body</label>
+      <textarea class="form-control" [(ngModel)]="article.body" #articleBody row="3"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="articleauthor">Article Author</label>
+      <input type="text" class="form-control" [(ngModel)]="article.author" #articleAuthor></div>
+ 
+    <div>
+    <button type="button" class="btn btn-success"(click)="update(articleTitle.value, articleBody.value, articleAuthor.value)">Update</button>
+    </div>
+

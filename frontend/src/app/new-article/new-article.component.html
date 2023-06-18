@@ -1,0 +1,20 @@
+<form>
+    <div class="mb-3">
+      <label for="articletitle" class="form-label">Article Title</label>
+      <input type="text" class="form-control"#articleTitle>
+    </div>
+
+    <div class="mb-3">
+      <label for="articlebody" class="form-label">Article Body</label>
+      <textarea class="form-control" #articleBody row="3"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="articleauthor">Article Author</label>
+      <input type="text" class="form-control"#articleAuthor>
+    </div>
+  </form>
+  <div>
+    <button type="button" class="btn btn-success"(click)="add(articleTitle.value, articleBody.value, articleAuthor.value);
+    articleTitle.value=''; articleBody.value='';articleAuthor.value=''">Add</button>
+  </div>
